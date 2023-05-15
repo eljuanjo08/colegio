@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <!-- <meta name="theme-color" content="#ffffff"> -->
+    <link rel="stylesheet" href="./styles/diseñocssf.css">
+    <link rel="stylesheet" href="./styles/dcoloresf.css">
+    <script src="./js/acciones.js"></script>
+    <title>Inventario-Fares</title>
+</head>
+<body>
+    <header id="titulo1" class="fcolor-d5">
+        <h1>Ediciones Fares</h1>
+    </header>
+    <nav class="fcolor-l4">
+        <ul>
+            <li><a href="#">Principal</a></li>
+            <li><a href="#">Libros</a></li>
+            <li class="f-desplegable">
+                <a href="#">Inventario</a>
+                <div class="cont-desplegable">
+                    <a href="cproductos.php">Crear producto</a>
+                    <a href="#">Consultar producto</a>
+                </div>
+            </li>
+            <li><a href="#">Contácto</a></li>
+        </ul>
+    </nav>
+    <section class="fcolor-l1 seccion-form">
+    <div class="s-encabezado">
+        <h2>Inventario</h2>
+    </div>
+    <form action="guardar.php" method="post" enctype="multipart/form-data" autocomplete="off" class="fcolor-l5">
+        <div id="codnom">
+            <label class="codnom1" for="codigo">Código: </label>
+            <input class="campof" type="text" name="codigo" id="codigo" pattern="[0-9]{3,}" placeholder="Ingresar solo números" size="12" autofocus required>
+            <label class="codnom1" for="nproductos">Producto: </label>
+            <input class="campof" type="text" name="nproductos" id="nproductos" pattern="^[a-zA-Z\s]+{3,100}" placeholder="Ingresar solo letras" size="45" required>
+        </div>
+        <div id="cospor">
+            <label class="codnom1" for="costop">Costo: </label>
+            <input class="campof" type="text" name="costop" id="costop" pattern="[0-9]+([,\.][0-9]+)?">
+            <label class="codnom1" for="porcentajev">Porcentaje de venta: </label>
+            <input class="campof" type="text" name="porcentajev" id="porcentajev" maxlength="3" size="4">
+        </div>
+        <div class="prefecha">
+            <label class="codnom1" for="pventa">Precio de venta: </label>
+            <input class="campof" type="text" name="pventa" id="pventa" readonly>
+            <label class="codnom1" for="fecha_creacion">Fecha: </label>
+            <input class="campof" type="text" name="fecha_creacion" id="fecha_creacion">
+        </div>
+        <div class="csimagen">
+            <img src="" alt="Imagen del Producto..." width="200px">
+        </div>
+        <div class="botonimg">
+            <label for="simagen">.</label>
+            <input class="campof" type="file" name="simagen" id="simagen">
+        </div>
+        <input class="campof" type="submit" value="Guardar">
+    </form>
+    </section>
+    <footer class="fcolor-d5">
+        <p>Derechos Reservados &copy; 2004-2023</p>
+    </footer>
+</body>
+</html>
